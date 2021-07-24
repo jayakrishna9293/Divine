@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>DIVINE HOSPITAL</title>
+    <!-- MDB icon -->
+    <link rel="icon" href="logo.png" type="image/x-icon" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" />
+    <!-- Google Fonts Roboto -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" />
+    <!-- MDB -->
+    <link rel="stylesheet" href="css/mdb.min.css" />
+</head>
+<style>
+    /* Color of the links BEFORE scroll */
+    
+    .navbar-scroll .nav-link,
+    .navbar-scroll .navbar-toggler-icon,
+    .navbar-scroll .navbar-brand {
+        color: white;
+    }
+    /* Color of the navbar BEFORE scroll */
+    
+    .navbar-scroll {
+        background-color: #282525;
+    }
+    /* Color of the links AFTER scroll */
+    
+    .navbar-scrolled .nav-link,
+    .navbar-scrolled .navbar-toggler-icon,
+    .navbar-scroll .navbar-brand {
+        color: white;
+    }
+    /* Color of the navbar AFTER scroll */
+    
+    .navbar-scrolled {
+        background-color: #fff;
+    }
+    /* An optional height of the navbar AFTER scroll */
+    
+    .navbar.navbar-scroll.navbar-scrolled {
+        padding-top: auto;
+        padding-bottom: auto;
+    }
+    
+    .navbar-brand {
+        font-size: unset;
+        height: 3.5rem;
+    }
+    
+    .map-container-6 {
+        overflow: hidden;
+        padding-bottom: 56.25%;
+        position: relative;
+        height: 0;
+    }
+    
+    .map-container-6 iframe {
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+    }
+    
+    h2 {
+        text-align: center;
+        color: red;
+    }
+    
+    p {
+        text-align: center;
+    }
+    
+    container {
+        padding-top: 0px;
+    }
+    
+    .address-icon i {
+        font-size: 36px;
+        line-height: 32px;
+    }
+    
+    .icons i {
+        color: #fff;
+        padding: 8px 0px;
+        text-align: center;
+        height: 30px;
+        width: 30px;
+        margin-right: 5px;
+    }
+</style>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-scroll fixed-top shadow-0 border-bottom border-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#!"><i class="DIVINE"><h3>DIVINE</h3></i></a>
+            <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <i class="fas fa-bars"></i>
+    </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="Home.html">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="treatment.html">TREATMENT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html">SERVICES</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="gallery.html">GALLERY</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="aboutus.html">ABOUT US</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">CONTACT</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar -->
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2 col-12">
+                <div class="row">
+                    <div class="col-lg-12 col-12 p-0 contact-us">
+                        <h4 class="">CONTACT US</h4>
+                        <hr>
+                    </div>
+                </div>
+                <div class="row bg-light pt-3 pb-3 mb-4">
+                    <div class="col-lg-12">
+                        <h6>ADDRESS :</h6>
+                    </div>
+                    <div class="col-lg-4 col-4">
+                        Saint Marco Street, 6th floor,Tokyo, Japan, 123456.
+                    </div>
+                    <div class="col-lg-4 col-4">
+                        <p class="m-0 text-danger"><i class="fa fa-phone-square" aria-hidden="true"></i> +91 1234567890
+                        </p>
+
+                        <p class="m-0 text-info"><i class="fa fa-envelope" aria-hidden="true"></i> example@gmail.com
+                        </p>
+                    </div>
+                    <div class="col-lg-4 col-4 address-icon text-center text-danger">
+                        <i class="fa fa-map-marker" aria-hidden="true"></i>
+                    </div>
+                </div>
+                <div class="row bg-light pt-3 pb-3 mb-4">
+                    <div class="col-lg-6 col-12">
+                        <form>
+                            <div class="form-row mb-3">
+                                <div class="col">
+                                    <input type="text" class="form-control" placeholder="Name :">
+                                </div>
+
+                            </div>
+                            <div class="form-row mb-3">
+                                <div class="col">
+                                    <input type="text" class="form-control" placeholder="Email :">
+                                </div>
+                                <br>
+                                <div class="col">
+                                    <input type="text" class="form-control" placeholder="Mobile :">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Message :"></textarea>
+                            </div>
+                            <br>
+                            <button type="submit" class="btn btn-danger mb-4">Send</button>
+                        </form>
+                    </div>
+                    <div class="col-lg-6 col-12">
+                        <div style="width: 100%"><iframe width="100%" height="300px" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d111785.5074918978!2d76.54629469101206!3d28.889517941500618!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d85a5414251a5%3A0x9f011cc2777a4544!2sRohtak%2C%20Haryana!5e0!3m2!1sen!2sin!4v1626340293614!5m2!1sen!2sin"
+                                frameborder="0" scrolling="no" marginheight="0" marginwidth="0"><a href="https://www.mapsdirections.info/en/custom-google-maps/">Create Google Map</a> by <a href="https://www.mapsdirections.info/en/">Measure area on map</a></iframe></div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- footer fixed star -->
+
+
+
+    <footer class="bg-dark text-center text-white">
+        <!-- Grid container -->
+        <div class="container p-4 pb-0">
+            <!-- Section: Social media -->
+            <section class="mb-4">
+                <!-- Facebook -->
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-facebook-f"></i
+      ></a>
+
+                <!-- Twitter -->
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-twitter"></i
+      ></a>
+
+                <!-- Google -->
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-google"></i
+      ></a>
+
+                <!-- Instagram -->
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-youtube"></i
+      ></a>
+
+                <!-- Linkedin -->
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-linkedin-in"></i
+      ></a>
+
+
+            </section>
+            <!-- Section: Social media -->
+        </div>
+        <!-- Grid container -->
+
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            © 2021 Copyright:
+            <a class="text-white" href="https://mdbootstrap.com/">DIVINE HOSPITAL</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+
+
+
+
+
+
+    <!-- MDB -->
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+    <!-- Custom scripts -->
+    <script type="text/javascript"></script>
+</body>
+
+</html>

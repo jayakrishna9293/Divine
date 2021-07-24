@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>DIVINE HOSPITAL</title>
+    <!-- MDB icon -->
+    <link rel="icon" href="logo.png" type="image/x-icon" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" />
+    <!-- Google Fonts Roboto -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" />
+    <!-- MDB -->
+    <link rel="stylesheet" href="css/mdb.min.css" />
+</head>
+<style>
+    /* Color of the links BEFORE scroll */
+    
+    .navbar-scroll .nav-link,
+    .navbar-scroll .navbar-toggler-icon,
+    .navbar-scroll .navbar-brand {
+        color: white;
+    }
+    /* Color of the navbar BEFORE scroll */
+    
+    .navbar-scroll {
+        background-color: #282525;
+    }
+    /* Color of the links AFTER scroll */
+    
+    .navbar-scrolled .nav-link,
+    .navbar-scrolled .navbar-toggler-icon,
+    .navbar-scroll .navbar-brand {
+        color: white;
+    }
+    /* Color of the navbar AFTER scroll */
+    
+    .navbar-scrolled {
+        background-color: #fff;
+    }
+    /* An optional height of the navbar AFTER scroll */
+    
+    .navbar.navbar-scroll.navbar-scrolled {
+        padding-top: auto;
+        padding-bottom: auto;
+    }
+    
+    .navbar-brand {
+        font-size: unset;
+        height: 3.5rem;
+    }
+    
+    .map-container-6 {
+        overflow: hidden;
+        padding-bottom: 56.25%;
+        position: relative;
+        height: 0;
+    }
+    
+    .map-container-6 iframe {
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+    }
+    
+    h2 {
+        text-align: center;
+        color: none;
+    }
+    
+    p {
+        text-align: center;
+    }
+    
+    @import "//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css";
+    @import "http://fonts.googleapis.com/css?family=Roboto:400,500";
+    .box>.icon {
+        text-align: center;
+        position: relative;
+    }
+    
+    .box>.icon>.image {
+        position: relative;
+        z-index: 2;
+        margin: auto;
+        width: 88px;
+        height: 88px;
+        border: 8px solid white;
+        line-height: 88px;
+        border-radius: 50%;
+        background: #008080;
+        vertical-align: middle;
+    }
+    
+    .box>.icon:hover>.image {
+        background: #333;
+    }
+    
+    .box>.icon>.image>i {
+        font-size: 36px !important;
+        color: #fff !important;
+    }
+    
+    .box>.icon:hover>.image>i {
+        color: white !important;
+    }
+    
+    .box>.icon>.info {
+        margin-top: -24px;
+        background: rgba(0, 0, 0, 0.04);
+        border: 1px solid #e0e0e0;
+        padding: 15px 0 10px 0;
+    }
+    
+    .box>.icon:hover>.info {
+        background: rgba(0, 0, 0, 0.04);
+        border-color: #e0e0e0;
+        color: white;
+    }
+    
+    .box>.icon>.info>h3.title {
+        font-family: "Roboto", sans-serif !important;
+        font-size: 16px;
+        color: #222;
+        font-weight: 500;
+    }
+    
+    .box>.icon>.info>p {
+        font-family: "Roboto", sans-serif !important;
+        font-size: 13px;
+        color: #666;
+        line-height: 1.5em;
+        margin: 20px;
+    }
+    
+    .box>.icon:hover>.info>h3.title,
+    .box>.icon:hover>.info>p,
+    .box>.icon:hover>.info>.more>a {
+        color: #222;
+    }
+    
+    .box>.icon>.info>.more a {
+        font-family: "Roboto", sans-serif !important;
+        font-size: 12px;
+        color: #222;
+        line-height: 12px;
+        text-transform: uppercase;
+        text-decoration: none;
+    }
+    
+    .box>.icon:hover>.info>.more>a {
+        color: #fff;
+        padding: 6px 8px;
+        background-color: #77af7c;
+    }
+    
+    .box .space {
+        height: 30px;
+    }
+    
+    html {
+        scroll-behavior: smooth;
+    }
+    
+    .caption-animate .item.active .carousel-caption {
+        -webkit-animation-duration: 1s;
+        animation-duration: 1s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+    }
+    
+    .caption-animate .item.active .carousel-caption.infinite {
+        -webkit-animation-iteration-count: infinite;
+        animation-iteration-count: infinite;
+    }
+    
+    .caption-animate .item.active .carousel-caption.hinge {
+        -webkit-animation-duration: 2s;
+        animation-duration: 2s;
+    }
+    
+    .caption-animate .item.active .carousel-caption.flipOutX,
+    .caption-animate .item.active .carousel-caption.flipOutY,
+    .caption-animate .item.active .carousel-caption.bounceIn,
+    .caption-animate .item.active .carousel-caption.bounceOut {
+        -webkit-animation-duration: .75s;
+        animation-duration: .75s;
+    }
+    
+    .caption-animate .item .carousel-caption.fadeIn,
+    .caption-animate .item .carousel-caption.fadeInDown,
+    .caption-animate .item .carousel-caption.fadeInDownBig,
+    .caption-animate .item .carousel-caption.fadeInLeft,
+    .caption-animate .item .carousel-caption.fadeInLeftBig,
+    .caption-animate .item .carousel-caption.fadeInRight,
+    .caption-animate .item .carousel-caption.fadeInRightBig,
+    .caption-animate .item .carousel-caption.fadeInUp,
+    .caption-animate .item .carousel-caption.fadeInUpBig {
+        opacity: 0;
+    }
+    
+    h3 {
+        color: none;
+    }
+</style>
+
+<body>
+
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-scroll fixed-top shadow-0 border-bottom border-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#!"><i class="DIVINE"></i><h3>DIVINE</h3></a>
+            <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <i class="fas fa-bars"></i>
+    </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="Home.html">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="treatment.html">TREATMENT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html">SERVICES</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="gallery.html">GALLERY</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="aboutus.html">ABOUT US</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">CONTACT</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar -->
+    <br>
+    <br>
+
+    <div id="carouselExampleCrossfade" class="carousel slide carousel-fade" data-mdb-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-mdb-target="#carouselExampleCrossfade" data-mdb-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-mdb-target="#carouselExampleCrossfade" data-mdb-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-mdb-target="#carouselExampleCrossfade" data-mdb-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+
+
+
+
+
+            <div class="carousel-item active">
+                <img src="img/c3.jpg" class="d-block w-100" alt="..." />
+                <div class="carousel-caption fadeInDown">
+                    <h3>
+                        This is the caption for slide 1
+                    </h3>
+                    <h3>
+                        This is the caption for slide 1
+                    </h3>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="img/c5.jpg" class="d-block w-100" alt="..." />
+
+            </div>
+            <div class="carousel-item">
+                <img src="img/c4.jpg" class="d-block w-100" alt="..." />
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-mdb-target="#carouselExampleCrossfade" data-mdb-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+        <button class="carousel-control-next" type="button" data-mdb-target="#carouselExampleCrossfade" data-mdb-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+    </div>
+
+    <br>
+    <br>
+
+    <br>
+    <br>
+    <div class="container">
+        <div class="row">
+            <!-- Boxes de Acoes -->
+            <div class="col-xs-12 col-sm-6 col-lg-4">
+                <div class="box">
+                    <div class="icon">
+                        <div class="image"><i class="far fa-clock"></i></div>
+                        <div class="info">
+                            <br>
+                            <h3 class="title">24/7</h3>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in lobortis nisl, vitae iaculis sapien. Phasellus ultrices gravida massa luctus ornare. Suspendisse blandit quam elit, eu imperdiet neque semper.
+                            </p>
+                            <div class="more">
+                                <a href="#" title="Title Link">
+                                    Read More <i class="fa fa-angle-double-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="space"></div>
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-sm-6 col-lg-4">
+                <div class="box">
+                    <div class="icon">
+                        <div class="image"><i class="fa fa-ambulance"></i></div>
+                        <div class="info">
+                            <br>
+                            <h3 class="title">AMBULANCE</h3>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in lobortis nisl, vitae iaculis sapien. Phasellus ultrices gravida massa luctus ornare. Suspendisse blandit quam elit, eu imperdiet neque semper.
+                            </p>
+                            <div class="more">
+                                <a href="#" title="Title Link">
+                                    Read More <i class="fa fa-angle-double-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="space"></div>
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-sm-6 col-lg-4">
+                <div class="box">
+                    <div class="icon">
+                        <div class="image"><i class="fas fa-book-medical"></i></div>
+                        <div class="info">
+                            <br>
+                            <h3 class="title">Pharmacy</h3>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in lobortis nisl, vitae iaculis sapien. Phasellus ultrices gravida massa luctus ornare. Suspendisse blandit quam elit, eu imperdiet neque semper.
+                            </p>
+                            <div class="more">
+                                <a href="#" title="Title Link">
+                                    Read More <i class="fa fa-angle-double-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="space"></div>
+                </div>
+            </div>
+            <!-- /Boxes de Acoes -->
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="row">
+            <!-- Boxes de Acoes -->
+            <div class="col-xs-12 col-sm-6 col-lg-4">
+                <div class="box">
+                    <div class="icon">
+                        <div class="image"><i class="fas fa-syringe"></i></div>
+                        <div class="info">
+                            <br>
+                            <h3 class="title">Blood Test</h3>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in lobortis nisl, vitae iaculis sapien. Phasellus ultrices gravida massa luctus ornare. Suspendisse blandit quam elit, eu imperdiet neque semper.
+                            </p>
+                            <div class="more">
+                                <a href="#" title="Title Link">
+                                    Read More <i class="fa fa-angle-double-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="space"></div>
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-sm-6 col-lg-4">
+                <div class="box">
+                    <div class="icon">
+                        <div class="image"><i class="fas fa-file-medical"></i></div>
+                        <div class="info">
+                            <br>
+                            <h3 class="title">Medical Counselling</h3>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in lobortis nisl, vitae iaculis sapien. Phasellus ultrices gravida massa luctus ornare. Suspendisse blandit quam elit, eu imperdiet neque semper.
+                            </p>
+                            <div class="more">
+                                <a href="#" title="Title Link">
+                                    Read More <i class="fa fa-angle-double-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="space"></div>
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-sm-6 col-lg-4">
+                <div class="box">
+                    <div class="icon">
+                        <div class="image"><i class="fa fa-heartbeat"></i></div>
+                        <div class="info">
+                            <br>
+                            <h3 class="title">ICU</h3>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in lobortis nisl, vitae iaculis sapien. Phasellus ultrices gravida massa luctus ornare. Suspendisse blandit quam elit, eu imperdiet neque semper.
+                            </p>
+                            <div class="more">
+                                <a href="#" title="Title Link">
+                                    Read More <i class="fa fa-angle-double-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="space"></div>
+                </div>
+            </div>
+            <!-- /Boxes de Acoes -->
+        </div>
+    </div>
+
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="grid-box">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/KrN91YZxJyM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- footer fixed star -->
+
+
+
+    <footer class="bg-dark text-center text-white">
+        <!-- Grid container -->
+        <div class="container p-4 pb-0">
+            <!-- Section: Social media -->
+            <section class="mb-4">
+                <!-- Facebook -->
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-facebook-f"></i
+      ></a>
+
+                <!-- Twitter -->
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-twitter"></i
+      ></a>
+
+                <!-- Google -->
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-google"></i
+      ></a>
+
+                <!-- Instagram -->
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-instagram"></i
+      ></a>
+
+                <!-- Linkedin -->
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-linkedin-in"></i
+      ></a>
+
+                <!-- Github -->
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-github"></i
+      ></a>
+            </section>
+            <!-- Section: Social media -->
+        </div>
+        <!-- Grid container -->
+
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            © 2021 Copyright:
+            <a class="text-white" href="https://mdbootstrap.com/">DIVINE HOSPITAL</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+
+
+
+
+
+
+    <!-- MDB -->
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+    <!-- Custom scripts -->
+    <script type="text/javascript"></script>
+</body>
+
+</html>
