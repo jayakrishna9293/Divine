@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css">
+<script src="https://code.jquery.com/jquery-1.12.3.js"></script>
+<script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+<style type="text/css" class="init">
+  tfoot {
+      display: table-header-group;
+  }
+</style>
+<script type="text/javascript" class="init">
+$(document).ready(function() {
+    $('#example tfoot th').each( function () {
+        var title = $(this).text();
+        $(this).html( '<input type="text" placeholder="Search '+title+'" />' );
+    } );
+
+    var table = $('#example').DataTable();
+
+    table.columns().every( function () {
+        var that = this;
+
+        $( 'input', this.footer() ).on( 'keyup change', function () {
+            if ( that.search() !== this.value ) {
+                that
+                    .search( this.value )
+                    .draw();
+            }
+        } );
+    } );
+} );
+</script>
+</head>
+<body>
+    <table id="example" class="display" cellspacing="0" width="100%">
+      <thead>
+        <tr>
+          <th>Employee Name</th>
+          <th>Date</th>
+          <th>Time</th>
+          <th>Type(IN/OUT)</th>
+        </tr>
+      </thead>
+      <tfoot>
+        <tr>
+          <th>Employee Name</th>
+          <th>Date</th>
+          <th>Time</th>
+          <th>Type(IN/OUT)</th>
+        </tr>
+      </tfoot>
+      <tbody>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>DUKE</td>
+          <td>09-12-21</td>
+          <td>4.18.47 PM</td>
+          <td>OUT</td>
+        </tr>
+        <tr>
+          <td>HARI</td>
+          <td>09-12-21</td>
+          <td>4.18.42 PM</td>
+          <td>OUT</td>
+        </tr>
+        <tr>
+          <td>SAINADH</td>
+          <td>09-12-21</td>
+          <td>4.18.39 PM</td>
+          <td>OUT</td>
+        </tr>
+        <tr>
+          <td>MUKHIA</td>
+          <td>09-12-21</td>
+          <td>4.18.32 PM</td>
+          <td>OUT</td>
+        </tr>
+        <tr>
+          <td>KSHITIJ</td>
+          <td>09-12-21</td>
+          <td>4.18.26 PM</td>
+          <td>OUT</td>
+        </tr>
+        <tr>
+          <td>DUKE</td>
+          <td>09-12-21</td>
+          <td>4.18.19 PM</td>
+          <td>IN</td>
+        </tr>
+        <tr>
+          <td>HARI</td>
+          <td>09-12-21</td>
+          <td>4.18.13 PM</td>
+          <td>IN</td>
+        </tr>
+        <tr>
+          <td>SAINADH</td>
+          <td>09-12-21</td>
+          <td>4.18.08 PM</td>
+          <td>IN</td>
+        </tr>
+        <tr>
+          <td>MUKHIA</td>
+          <td>09-12-21</td>
+          <td>4.17.50 PM</td>
+          <td>IN</td>
+        </tr>
+        <tr>
+          <td>KSHITIJ</td>
+          <td>09-12-21</td>
+          <td>4.17.40 PM</td>
+          <td>IN</td>
+        </tr>
+        <tr>
+          <td>NAGRAJ</td>
+          <td>09-12-21</td>
+          <td>10.52.06 AM</td>
+          <td>OUT</td>
+        </tr>
+        <tr>
+          <td>NAGRAJ</td>
+          <td>09-12-21</td>
+          <td>10.51.36 AM</td>
+          <td>IN</td>
+        </tr>
+        <tr>
+          <td>KARTHIK</td>
+          <td>09-12-21</td>
+          <td>10.50.07 AM</td>
+          <td>OUT</td>
+        </tr>
+        <tr>
+          <td>karthik</td>
+          <td>09-12-21</td>
+          <td>10.50.00 AM</td>
+          <td>IN</td>
+        </tr>
+        <tr>
+          <td>aitam</td>
+          <td>09-12-21</td>
+          <td>9.43.03 AM</td>
+          <td>OUT</td>
+        </tr>
+        <tr>
+          <td>aitam</td>
+          <td>09-12-21</td>
+          <td>9.42.30 AM</td>
+          <td>in</td>
+        </tr>
+        <tr>
+          <td>nitin</td>
+          <td>09-12-21</td>
+          <td>9.28.43 AM</td>
+          <td>OUT</td>
+        </tr>
+        <tr>
+          <td>Jagadesh</td>
+          <td>09-12-21</td>
+          <td>9.28.00 AM</td>
+          <td>OUT</td>
+        </tr>
+        <tr>
+          <td>JAGADESH</td>
+          <td>09-12-21</td>
+          <td>9.27.44 AM</td>
+          <td>IN</td>
+        </tr>
+        <tr>
+          <td>CHARAN</td>
+          <td>09-12-21</td>
+          <td>9.27.01 AM</td>
+          <td>OUT</td>
+        </tr>
+        <tr>
+          <td>venkatesh</td>
+          <td>09-12-21</td>
+          <td>9.24.56 AM</td>
+          <td>OUT</td>
+        </tr>
+        <tr>
+          <td>venkatesh</td>
+          <td>09-12-21</td>
+          <td>9.24.28 AM</td>
+          <td>IN</td>
+        </tr>
+        <tr>
+          <td>MALL</td>
+          <td>09-12-21</td>
+          <td>9.17.44 AM</td>
+          <td>IN</td>
+        </tr>
+        <tr>
+          <td>MALLI</td>
+          <td>09-12-21</td>
+          <td>9.14.08 AM</td>
+          <td>IN</td>
+        </tr>
+        <tr>
+          <td>CHARAN</td>
+          <td>05-12-21</td>
+          <td>11.02.13 AM</td>
+          <td>IN</td>
+        </tr>
+        <tr>
+          <td>DINESH</td>
+          <td>05-12-21</td>
+          <td>11.00.12 AM</td>
+          <td>IN</td>
+        </tr>
+        <tr>
+          <td>jaya</td>
+          <td>05-12-21</td>
+          <td>10.54.58 AM</td>
+          <td>OUT</td>
+        </tr>
+        <tr>
+          <td>JAYA</td>
+          <td>05-12-21</td>
+          <td>10.38.20 AM</td>
+          <td>IN</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+</body>
+</html>

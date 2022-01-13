@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>SAD MICRO</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" />
+    <!-- Google Fonts Roboto -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" />
+    <!-- MDB -->
+    <link rel="stylesheet" href="css/mdb.min.css" />
+</head>
+<style>
+    body {
+        background-color: black;
+    }
+    
+    input[type=text],
+    input[type=password] {
+        width: 100%;
+        padding: 15px;
+        margin: 5px 0 22px 0;
+        display: inline-block;
+        border: none;
+        background: #f1f1f1;
+    }
+    
+    input[type=text]:focus,
+    input[type=password]:focus {
+        background-color: #ddd;
+        outline: none;
+    }
+    
+    hr {
+        margin-bottom: 25px;
+    }
+    /* Set a style for all buttons */
+    
+    button {
+        background-color: #04AA6D;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        opacity: 0.9;
+    }
+    
+    button:hover {
+        opacity: 1;
+    }
+    /* Extra styles for the cancel button */
+    
+    .cancelbtn {
+        padding: 14px 20px;
+        background-color: #f44336;
+    }
+    /* Float cancel and signup buttons and add an equal width */
+    
+    .cancelbtn,
+    .signupbtn {
+        float: left;
+        width: 50%;
+    }
+    /* Add padding to container elements */
+    /* Clear floats */
+    
+    .clearfix::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+    /* Change styles for cancel button and signup button on extra small screens */
+    
+    @media screen and (max-width: 300px) {
+        .cancelbtn,
+        .signupbtn {
+            width: 100%;
+        }
+    }
+    
+    h1 {
+        color: crimson;
+        text-align: center;
+    }
+    
+    p {
+        text-align: center;
+    }
+    
+    @media screen and (min-width: 300px) {
+        .container1 {
+            max-width: 100%;
+            padding-left: 0px;
+            padding-right: 0px;
+        }
+    }
+    
+    @media screen and (min-width: 640px) {
+        .container1 {
+            padding-left: 450px;
+            padding-right: 450px;
+        }
+    }
+</style>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <!-- Container wrapper -->
+        <div class="container">
+            <!-- Navbar brand -->
+            <a class="navbar-brand me-2" href="">
+                <img src="0" height="16" alt="" loading="lazy" style="margin-top: -1px;" />
+            </a>
+
+            <!-- Toggle button -->
+            <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarButtonsExample" aria-controls="navbarButtonsExample" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+
+            <!-- Collapsible wrapper -->
+            <div class="collapse navbar-collapse" id="navbarButtonsExample">
+                <!-- Left links -->
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Biometric E-Management System</a>
+                    </li>
+                </ul>
+                <!-- Left links -->
+
+                <div class="d-flex align-items-center">
+                    <button1 type="button" class="btn btn-primary me-2">
+                        Login
+                    </button1>
+                    <button1 type="button" class="btn btn-primary me-3">
+                        Sign up for free
+                    </button1>
+                </div>
+            </div>
+            <!-- Collapsible wrapper -->
+        </div>
+        <!-- Container wrapper -->
+    </nav>
+    <!-- Navbar -->
+
+
+    <br>
+    <br>
+    <br>
+    <div class="container1">
+        <form action="signup_details.php" method="POST">
+            <div class="container">
+                <h1>Sign Up</h1>
+                <p>Please fill in this form to create an account.</p>
+                <hr>
+
+                <label for="email"><b>Email</b></label>
+                <input type="text" placeholder="Enter Email" name="emails" required>
+
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="paswd" required>
+
+                <label for="psw-repeat"><b>Repeat Password</b></label>
+                <input type="password" placeholder="Repeat Password" name="paswd_repeat" required>
+
+                <label>
+                <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+              </label>
+
+                <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+
+                <div class="clearfix">
+                    <button type="button" class="cancelbtn">Cancel</button>
+                    <button type="submit" name="submit" value="signup" class="signupbtn">Sign Up</button>
+                </div>
+            </div>
+        </form>
+
+    </div>
+
+
+
+
+
+    <!-- footer fixed star -->
+
+
+
+    <footer class="bg-dark text-center text-white">
+        <!-- Grid container -->
+        <div class="container p-4 pb-0">
+            <!-- Section: Social media -->
+            <section class="mb-4">
+                <!-- Facebook -->
+                <a class="btn btn-outline-light btn-floating m-1" href="https://www.facebook.com/DrRPKhatri/" role="button"><i class="fab fa-facebook-f"></i
+      ></a>
+
+                <!-- Twitter -->
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-twitter"></i
+      ></a>
+
+                <!-- Google -->
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-google"></i
+      ></a>
+
+                <a class="btn btn-outline-light btn-floating m-1" href="https://www.youtube.com/channel/UCNo7Pso0r1XazZzrUK9TK2Q" role="button"><i class="fab fa-youtube"></i
+        ></a>
+
+                <!-- Linkedin -->
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-linkedin-in"></i
+      ></a>
+
+
+            </section>
+            <!-- Section: Social media -->
+        </div>
+        <!-- Grid container -->
+
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            © 2021 Copyright:
+            <a class="text-white" href="https://mdbootstrap.com/">Sad Project</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+
+
+
+
+
+
+    <!-- MDB -->
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+    <!-- Custom scripts -->
+    <script type="text/javascript"></script>
+</body>
+
+</html>
